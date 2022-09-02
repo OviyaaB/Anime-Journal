@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+  form,p{
+text-align: center;
+  }
+ 
+</style>
+</head>
+<body>
+<form action="{{ url_for("update_value")}}" method="post">
+  <label for="anime_id">anime id</label><br>
+  <input type="text" id="anime_id" name="anime_id"><br><br>
+  <label for="episodes">episodes</label><br>
+  <input type="text" id="episodes" name="episodes"><br><br>
+  
+  <input type="submit" value="Submit">
+<p>update anime</p>
+</body>
+</html>

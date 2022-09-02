@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+  form,p{
+text-align: center;
+  }
+ 
+</style>
+</head>
+<body>
+<form action="{{ url_for("insert_value")}}" method="post">
+  <label for="anime_id">Anime id</label><br>
+  <input type="text" id="anime_id" name="anime_id"><br><br>
+  <label for="anime_name">Anime name</label><br>
+  <input type="text" id="anime_name" name="anime_name"><br><br>
+  <label for="genre">Genre</label><br>
+  <input type="text" id="genre" name="genre"><br><br>
+  <label for="ratings">Ratings</label><br>
+  <input type="text" id="ratings" name="ratings"><br><br>
+  <label for="episodes">Episodes</label><br>
+  <input type="text" id="episodes" name="episodes"><br><br>
+  
+  <input type="submit" value="Submit">
+</form> 
+<p>add anime</p>
+</body>
+</html>

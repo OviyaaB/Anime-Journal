@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+  form,p{
+text-align: center;
+  }
+ table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+</style>
+</head>
+<body>
+
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Genre</th>
+	<th>Rating</th>
+	<th>Episode</th>
+  </tr>
+  
+{% for item in data %}
+        <tr><td>{{item.id}}</td><td>{{ item.name}}</td><td>{{ item.genre}}</td><td>{{ item.rating}}</td><td>{{ item.episodes}}</td></tr>
+       {% endfor %}
+  
+
+</table>
+
+<br><br>
+
+<form action="{{ url_for("hello")}}" >
+  <input type="submit" value="Go Home">
+</form>
+</body>
+</html>
